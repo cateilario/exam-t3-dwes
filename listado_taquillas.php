@@ -6,6 +6,7 @@ $conexion = conectarBD();
 
 $selectedCity = 'todas las localidades';
 
+// Implementar sesión que almacene preferencia
 if (isset($_SESSION['lastSession'])) {
     $selectedCity = $_SESSION['lastSession'];
 }
