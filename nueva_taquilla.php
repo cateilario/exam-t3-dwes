@@ -34,7 +34,6 @@
     require_once 'connection.php';
     $conexion = conectarBD();
 
-    
     if($_SERVER["REQUEST_METHOD"] == "POST") {
         $localidad = $_POST['localidad'];
         $direccion = $_POST['direccion'];
@@ -46,9 +45,7 @@
     $stmt = $conexion->prepare($sql);
 
     // Ejecutar la consulta
-    $stmt->execute([$localidad, $direccion, $capacidad, $ocupadas]);
-
-    if ($stmt->execute()) {
+    if ($stmt->execute([$localidad, $direccion, $capacidad, $ocupadas])) {
         echo "Nueva taquilla añadida con éxito.";
     } else {
         echo "Error al añadir la taquilla.";

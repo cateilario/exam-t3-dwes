@@ -16,27 +16,26 @@ if (isset($_GET['localidad'])) {
 
     // Actualizar localidad según la sesión
     $_SESSION['lastSession'] = $selectedCity;
-    
-    // Obtener taquilla según filtro
-    $sql = "SELECT localidad, direccion, capacidad, ocupadas FROM puntosderecogida";
-    if ($selectedCity !== 'todas las localidades') {
-        $sql .= " WHERE localidad = ?";
-        $stmt = $conexion->prepare($sql);
-        $stmt->execute([$selectedCity]);
-    } else {
-        $stmt = $conexion->query($sql);
-    }
 }
+
+// Obtener taquilla según filtro
+$sql = "SELECT localidad, direccion, capacidad, ocupadas FROM puntosderecogida";
+if ($selectedCity !== 'todas las localidades') {
+    $sql .= " WHERE localidad = ?";
+    $stmt = $conexion->prepare($sql);
+    $stmt->execute([$selectedCity]);
+} else {
+    $stmt = $conexion->query($sql);
+}
+
 ?>
+
 <!DOCTYPE html>
-
 <html>
-
 <head>
     <meta charset="utf-8">
     <title>Taquillator</title>
 </head>
-
 <body>
     <form action="" method="get">
     <select name="localidad">
