@@ -80,6 +80,8 @@ if ($stmt->rowCount() > 0) {
 
 ?>
 
+<p><a href="nueva_taquilla.php">Crear nueva taquilla</a></p>
+
 </body>
 
 </html>

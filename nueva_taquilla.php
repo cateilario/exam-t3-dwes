@@ -23,9 +23,11 @@
         
         <label for="ocupadas">Taquillas Ocupadas:</label><br>
         <input type="number" id="ocupadas" name="ocupadas" min="0" required><br>
-        
+        <br>
         <input type="submit" value="Añadir Taquilla">
     </form>
+
+    <p><a href="listado_taquillas.php">Volver a listado</a></p>
 </body>
 </html>
 
