@@ -37,6 +37,7 @@ if ($selectedCity !== 'todas las localidades') {
     <title>Taquillator</title>
 </head>
 <body>
+    <h1>Listado Taquillas</h1>
     <form action="" method="get">
     <select name="localidad">
         <option value="todas las localidades">Todas las localidades</option>
@@ -44,6 +45,7 @@ if ($selectedCity !== 'todas las localidades') {
         <option value="Oviedo" <?php echo $selectedCity == 'Oviedo' ? 'selected' : ''; ?>>Oviedo</option>
         <option value="Avilés" <?php echo $selectedCity == 'Avilés' ? 'selected' : ''; ?>>Avilés</option>
     </select>
+    <br>
     <br>
     <input type="submit" value="Buscar">
     </form>
